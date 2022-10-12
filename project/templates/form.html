@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="contaner" style="margin-top:150px">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <h1>Add New Menu</h1>
+                    <div class="form-group">
+                        <label for="">Photo</label>
+                        <input type="file" name="photo" id="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input class="input is-large" type="text" name="Name" placeholder="name" autofocus="">
+                    </div> 
+                    <div class="form-group">
+                        <label for="">description</label>
+                        <input class="input is-large" type="text" name="description" placeholder="description" autofocus="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="">Price</label>
+                         <input class="input is-large" type="text" name="Price" placeholder="price" autofocus="">
+                    </div>
+                    <div class="form-group">
+                        <a href="/album" class="btn btn-danger">Cancel</a>
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+
+    <script src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>

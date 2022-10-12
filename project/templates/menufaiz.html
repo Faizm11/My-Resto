@@ -1,0 +1,40 @@
+{% extends "adminhome.html" %}
+
+{% block content %}
+<nav>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+              <a href="/form" class="btn btn-success my-2">+</a>
+            </p>
+          </div>
+        </div>
+      </section>
+</nav>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th style="width: 10px">Nama</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      </tr>
+      {% for c in cars %}
+
+      <tr>
+        <td>{{c.name}}</td>
+        <td>{{c.price}}</td>
+        <td>{{c.colour}}</td>
+        <td >
+          <a class="btn btn-warning "href="/admin/category/cars/{{c.id}}/edit">Edit</a>
+        </td>
+        <td >
+          <a class="btn btn-danger "href="/admin/category/cars/{{c.id}}/delete">Delete</a>
+        </td>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock content %}
